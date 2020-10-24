@@ -1,3 +1,9 @@
+// Require db.js file as a module so wepack bundled with index.js
+const db = require('./indexedDb');
+
+// Whenever app comes online, check indexedDB and POST "pending" records to MongoDB
+window.addEventListener("online", db.checkDatabase);
+
 let transactions = [];
 let myChart;
 
