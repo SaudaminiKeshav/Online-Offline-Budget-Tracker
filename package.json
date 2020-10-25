@@ -9,7 +9,7 @@
     "start": "node server.js",
     "lite-server": "lite-server",
     "dev": "npm run webpack -- --mode development --watch",
-    "build": "npm run webpack -- --mode production"
+    "build": "npm run webpack"
   },
   "repository": {
     "type": "git",
