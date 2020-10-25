@@ -4,12 +4,12 @@
   "description": "Add functionality to our existing Budget Tracker application to allow for offline access and functionality.",
   "main": "server.js",
   "scripts": {
-    "prestart": "npm run webpack",
     "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "lite-server": "lite-server",
-    "build": "webpack --watch"
+    "dev": "npm run webpack -- --mode development --watch",
+    "build": "npm run webpack -- --mode production"
   },
   "repository": {
     "type": "git",

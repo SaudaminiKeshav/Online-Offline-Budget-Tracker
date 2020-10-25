@@ -9,35 +9,28 @@ request.onupgradeneeded = function (event) {
     db.createObjectStore("pending", { autoIncrement: true });
 };
 
-// If indexedDB is not created successfully, log error
+
 request.onerror = function (event) {
     console.log("Whoops! " + event.target.errorCode);
 };
 
-// When indexedDB is successfully created,
+// When indexedDB is successfully connected,
 request.onsuccess = function (event) {
     db = event.target.result;
 
-    // If app is online, check indexedDB and POST "pending" records to MongoDB
-    // navigator.onLine is a property that maintains a true/false value and updates whenever a browser is no longer capable of connecting to the network
-    if (navigator.onLine) {
+     if (navigator.onLine) {
         checkDatabase();
     }
 };
 
-// Whenever app comes online, check indexedDB and POST "pending" records to MongoDB
-window.addEventListener("online", checkDatabase);
-
-
 function checkDatabase() {
-    // Open a transaction on your pending db
+
     const transaction = db.transaction(["pending"], "readwrite");
-    // Access your pending object store
+
     const store = transaction.objectStore("pending");
-    // Get all records from store and set to a variable
+
     const getAll = store.getAll();
 
-    // Upon successfully getting all pending records in store
     getAll.onsuccess = function () {
 
         // Then if there are any pending results, and POST to the MongoDB
@@ -78,6 +71,6 @@ function saveRecord(record) {
 }
 
 module.exports = {
-  checkDatabase,
-  saveRecord
+    checkDatabase,
+    saveRecord
 };
