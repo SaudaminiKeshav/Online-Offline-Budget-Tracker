@@ -14,7 +14,8 @@ When brought back online:
 
   * Offline entries should be added to tracker.
 
-##  The application is deployed to Heroku and can be installed as a progressive web app through your browser here: [OnlineOfflineBudgetTracker.herokuapp.com](https://onlineoffline-budget-tracker.herokuapp.com/)
+##  The application is deployed to Heroku and can be installed as a progressive web app through your browser here: 
+Click on the link to checkout the Web application - [OnlineOfflineBudgetTracker.herokuapp.com](https://onlineoffline-budget-tracker.herokuapp.com/)
 
 ## User Story
 AS AN avid traveller
