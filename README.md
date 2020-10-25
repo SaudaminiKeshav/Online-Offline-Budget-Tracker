@@ -14,6 +14,8 @@ When brought back online:
 
   * Offline entries should be added to tracker.
 
+##  The application is deployed to Heroku and can be installed as a progressive web app through your browser here: [OnlineOfflineBudgetTracker.herokuapp.com](https://onlineoffline-budget-tracker.herokuapp.com/)
+
 ## User Story
 AS AN avid traveller
 I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
